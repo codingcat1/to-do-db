@@ -10,8 +10,15 @@ RSpec.configure do |config|
 end
 
 describe List do
+
   it 'is initialized with a name' do
     list = List.new('Epicodus stuff')
     expect(list).to be_an_instance_of List
   end
+
+  it 'tells you its name' do
+    list = List.new('Epicodus stuff')
+    expect(list.name).to eq 'Epicodus stuff'
+  end
+
 end
