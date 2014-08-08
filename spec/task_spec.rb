@@ -10,4 +10,8 @@ describe Task do
     task = Task.new('learn SQL')
     task.name.should eq 'learn SQL'
   end
+
+  it 'starts with no tasks' do
+    Task.all.should eq []
+  end
 end
