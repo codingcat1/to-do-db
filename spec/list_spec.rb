@@ -37,7 +37,11 @@ describe List do
     expect(List.all).to eq [list]
   end
 
-
+  it 'sets its ID when you save it' do
+    list = List.new('Epicodus stuff')
+    list.save
+    expect(list.id).to be_an_instance_of Fixnum #fixnum is Ruby's name for integers that are below a certain value that are causing them to be stored in a different way
+  end
 
 
 end

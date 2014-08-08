@@ -9,6 +9,10 @@ class List
     @name
   end
 
+  def id
+    @id
+  end
+
   def ==(another_task)
     self.name == another_task.name
   end
@@ -24,6 +28,7 @@ class List
   end
 
   def save
-    DB.exec("INSERT INTO lists (name) VALUES ('#{@name}');")
+    results = DB.exec("INSERT INTO lists (name) VALUES ('#{@name}') RETURNING id;")
+    @id = results.first['id'].to_i
   end
 end
