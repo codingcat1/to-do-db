@@ -21,4 +21,10 @@ describe List do
     expect(list.name).to eq 'Epicodus stuff'
   end
 
+  it 'is the same list if it has the same name' do
+    list1 = List.new('Epicodus stuff')
+    list2 = List.new('Epicodus stuff')
+    expect(list1).to eq list2
+  end
+
 end
