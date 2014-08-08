@@ -27,4 +27,13 @@ describe List do
     expect(list1).to eq list2
   end
 
+  it 'starts off with no lists' do
+    expect(List.all).to eq []
+  end
+
+
+
+
+
+
 end
